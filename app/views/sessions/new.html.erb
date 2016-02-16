@@ -1,0 +1,7 @@
+<h1>Users</h1>
+
+<%=form_for(:user, url: :sessions_create, method: :post) do |f| %>
+  <%=f.label "Select your name"%>
+  <%=f.collection_select :id, User.all, :id, :name%><br>
+  <%=f.submit "Sign In"%>
+<%end%>
